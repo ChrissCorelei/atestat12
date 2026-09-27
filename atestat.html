@@ -26,9 +26,98 @@
                 color: #8c3456;
                 background: rgba(255, 255, 255, 0.55);
             }
+            .meniu
+            {
+                max-width: 700px;
+                margin: 40px auto;
+                padding: 20px 30px;
+                background: rgba(255, 255, 255, 0.6);
+                border-radius: 16px;
+            }
+            .meniu h2
+            {
+                text-align: center;
+                color: #8c3456;
+                margin-top: 0;
+            }
+            .produs
+            {
+                display: flex;
+                justify-content: space-between;
+                gap: 16px;
+                padding: 12px 0;
+                border-bottom: 1px dashed #e8a5bb;
+            }
+            .produs:last-child
+            {
+                border-bottom: none;
+            }
+            .produs h3
+            {
+                margin: 0 0 4px 0;
+                font-size: 1.1em;
+            }
+            .produs p
+            {
+                margin: 0;
+                font-size: 0.9em;
+                color: #8a5a6c;
+            }
+            .pret
+            {
+                font-weight: bold;
+                white-space: nowrap;
+                color: #8c3456;
+            }
         </style>
     </head>
     <body>
         <h1><b><i>Patiseria Amira</i></b></h1>
+
+        <section class="meniu">
+            <h2>Meniu</h2>
+            <div class="produs">
+                <div>
+                    <h3>Papanași</h3>
+                    <p>Cu smântână și dulceață de afine</p>
+                </div>
+                <span class="pret">22 lei</span>
+            </div>
+            <div class="produs">
+                <div>
+                    <h3>Amandină</h3>
+                    <p>Blat de ciocolată însiropat, cremă fondantă și glazură</p>
+                </div>
+                <span class="pret">12 lei</span>
+            </div>
+            <div class="produs">
+                <div>
+                    <h3>Savarină</h3>
+                    <p>Blat însiropat cu frișcă proaspătă</p>
+                </div>
+                <span class="pret">12 lei</span>
+            </div>
+            <div class="produs">
+                <div>
+                    <h3>Ecler cu vanilie</h3>
+                    <p>Aluat opărit, cremă de vanilie și glazură de ciocolată</p>
+                </div>
+                <span class="pret">10 lei</span>
+            </div>
+            <div class="produs">
+                <div>
+                    <h3>Tort Diplomat (felie)</h3>
+                    <p>Cremă de vanilie, frișcă și fructe</p>
+                </div>
+                <span class="pret">15 lei</span>
+            </div>
+            <div class="produs">
+                <div>
+                    <h3>Cozonac cu nucă și cacao</h3>
+                    <p>Făcut în casă, după rețeta tradițională</p>
+                </div>
+                <span class="pret">35 lei</span>
+            </div>
+        </section>
     </body>
 </html>
