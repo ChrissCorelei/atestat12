@@ -5,6 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Patiseria Amira</title>
         <style>
+            html
+            {
+                scroll-behavior: smooth;
+            }
             body
             {
                 margin: 0;
@@ -18,13 +22,52 @@
                 font-family: Georgia, "Times New Roman", serif;
                 color: #6b2e45;
             }
-            h1
+            .bun-venit
             {
+                min-height: 100vh;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
                 text-align: center;
-                padding: 20px;
-                margin: 0;
+                padding: 40px 20px;
+            }
+            .bun-venit h1
+            {
+                margin: 0 0 10px 0;
+                font-size: 3.2em;
                 color: #8c3456;
+            }
+            .slogan
+            {
+                margin: 0 0 24px 0;
+                font-size: 1.3em;
+                font-style: italic;
+                color: #a14a6b;
+            }
+            .bun-venit .descriere
+            {
+                max-width: 600px;
+                margin: 0 0 32px 0;
+                padding: 20px 30px;
+                line-height: 1.6;
                 background: rgba(255, 255, 255, 0.55);
+                border-radius: 16px;
+            }
+            .buton
+            {
+                display: inline-block;
+                padding: 12px 28px;
+                border-radius: 30px;
+                background: #8c3456;
+                color: #fff;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            .buton:hover
+            {
+                background: #a14a6b;
             }
             .meniu
             {
@@ -69,13 +112,56 @@
                 white-space: nowrap;
                 color: #8c3456;
             }
+            .meniu .intro
+            {
+                text-align: center;
+                margin: 0 0 16px 0;
+                line-height: 1.6;
+                color: #8a5a6c;
+            }
+            .contact
+            {
+                max-width: 700px;
+                margin: 40px auto 60px auto;
+                padding: 20px 30px;
+                background: rgba(255, 255, 255, 0.6);
+                border-radius: 16px;
+                text-align: center;
+            }
+            .contact h2
+            {
+                color: #8c3456;
+                margin-top: 0;
+            }
+            .contact p
+            {
+                margin: 10px 0;
+            }
+            .contact a
+            {
+                color: #8c3456;
+            }
         </style>
     </head>
     <body>
-        <h1><b><i>Patiseria Amira</i></b></h1>
+        <section class="bun-venit" id="acasa">
+            <h1><b><i>Patiseria Amira</i></b></h1>
+            <p class="slogan">Dulciuri făcute cu drag, ca la bunica acasă</p>
+            <p class="descriere">
+                Bine ai venit la Patiseria Amira! Aici găsești prăjituri tradiționale românești,
+                torturi fine, eclere și cozonaci pufoși, pregătiți zilnic din ingrediente proaspete
+                și după rețete de familie. Oprește-te la o cafea și o felie de ceva bun
+                sau ia-ți desertul preferat la pachet - fiecare gustare e o mică sărbătoare.
+            </p>
+            <a class="buton" href="#meniu">Descoperă meniul</a>
+        </section>
 
-        <section class="meniu">
+        <section class="meniu" id="meniu">
             <h2>Meniu</h2>
+            <p class="intro">
+                Toate produsele noastre sunt preparate în laboratorul propriu, în fiecare dimineață.
+                Alege-ți preferatele din lista de mai jos!
+            </p>
             <div class="produs">
                 <div>
                     <h3>Papanași</h3>
@@ -118,6 +204,13 @@
                 </div>
                 <span class="pret">35 lei</span>
             </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2>Contact</h2>
+            <p><b>Telefon:</b> <a href="tel:+40700000000">07XX XXX XXX</a></p>
+            <p><b>Email:</b> <a href="mailto:contact@exemplu.ro">contact@exemplu.ro</a></p>
+            <p><b>Adresă:</b> Strada [Numele străzii], nr. [XX], [Oraș]</p>
         </section>
     </body>
 </html>
