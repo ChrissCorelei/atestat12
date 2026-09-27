@@ -7,49 +7,69 @@
         <link rel="stylesheet" href="atestat.css">
     </head>
     <body>
-        <section class="bun-venit" id="acasa">
-            <h1><b><i>Patiseria Amira</i></b></h1>
-            <p class="slogan">Dulciuri făcute cu drag, ca la bunica acasă</p>
-            <p class="descriere">
-                Bine ai venit la Patiseria Amira! Aici găsești prăjituri tradiționale românești,
-                torturi fine, eclere și cozonaci pufoși, pregătiți zilnic din ingrediente proaspete
-                și după rețete de familie. Oprește-te la o cafea și o felie de ceva bun
-                sau ia-ți desertul preferat la pachet - fiecare gustare e o mică sărbătoare.
-            </p>
-            <a class="buton" href="#meniu">Descoperă meniul</a>
-        </section>
+        <a class="cos-icon" href="#cos" aria-label="Coșul de cumpărături">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="cos-numar" id="cos-numar" hidden>0</span>
+        </a>
 
-        <div class="zona-meniu" id="meniu">
-            <section class="meniu">
-                <h2>Meniu</h2>
-                <p class="intro">
-                    Toate produsele noastre sunt preparate în laboratorul propriu, în fiecare dimineață.
-                    Alege-ți preferatele din lista de mai jos!
+        <div id="pagina-principala">
+            <section class="bun-venit" id="acasa">
+                <h1><b><i>Patiseria Amira</i></b></h1>
+                <p class="slogan">Dulciuri făcute cu drag, ca la bunica acasă</p>
+                <p class="descriere">
+                    Bine ai venit la Patiseria Amira! Aici găsești prăjituri tradiționale românești,
+                    torturi fine, eclere și cozonaci pufoși, pregătiți zilnic din ingrediente proaspete
+                    și după rețete de familie. Oprește-te la o cafea și o felie de ceva bun
+                    sau ia-ți desertul preferat la pachet - fiecare gustare e o mică sărbătoare.
                 </p>
-                <button class="produs" type="button" data-descriere="Cu smântână și dulceață de afine" data-pret="22 lei">Papanași</button>
-                <button class="produs" type="button" data-descriere="Blat de ciocolată însiropat, cremă fondantă și glazură" data-pret="12 lei">Amandină</button>
-                <button class="produs" type="button" data-descriere="Blat însiropat cu frișcă proaspătă" data-pret="12 lei">Savarină</button>
-                <button class="produs" type="button" data-descriere="Aluat opărit, cremă de vanilie și glazură de ciocolată" data-pret="10 lei">Ecler cu vanilie</button>
-                <button class="produs" type="button" data-descriere="Cremă de vanilie, frișcă și fructe" data-pret="15 lei">Tort Diplomat (felie)</button>
-                <button class="produs" type="button" data-descriere="Făcut în casă, după rețeta tradițională" data-pret="35 lei">Cozonac cu nucă și cacao</button>
+                <a class="buton" href="#meniu">Descoperă meniul</a>
             </section>
 
-            <section class="detalii">
-                <h2>Detalii</h2>
-                <p class="indemn" id="detalii-indemn">Apasă pe numele unei prăjituri din meniu pentru a vedea descrierea și prețul.</p>
-                <div id="detalii-continut" hidden>
-                    <h3 id="detalii-nume"></h3>
-                    <p id="detalii-descriere"></p>
-                    <p class="pret" id="detalii-pret"></p>
-                </div>
+            <div class="zona-meniu" id="meniu">
+                <section class="meniu">
+                    <h2>Meniu</h2>
+                    <p class="intro">
+                        Toate produsele noastre sunt preparate în laboratorul propriu, în fiecare dimineață.
+                        Alege-ți preferatele din lista de mai jos!
+                    </p>
+                    <button class="produs" type="button" data-descriere="Cu smântână și dulceață de afine" data-pret="22">Papanași</button>
+                    <button class="produs" type="button" data-descriere="Blat de ciocolată însiropat, cremă fondantă și glazură" data-pret="12">Amandină</button>
+                    <button class="produs" type="button" data-descriere="Blat însiropat cu frișcă proaspătă" data-pret="12">Savarină</button>
+                    <button class="produs" type="button" data-descriere="Aluat opărit, cremă de vanilie și glazură de ciocolată" data-pret="10">Ecler cu vanilie</button>
+                    <button class="produs" type="button" data-descriere="Cremă de vanilie, frișcă și fructe" data-pret="15">Tort Diplomat (felie)</button>
+                    <button class="produs" type="button" data-descriere="Făcut în casă, după rețeta tradițională" data-pret="35">Cozonac cu nucă și cacao</button>
+                </section>
+
+                <section class="detalii">
+                    <h2>Detalii</h2>
+                    <p class="indemn" id="detalii-indemn">Apasă pe numele unei prăjituri din meniu pentru a vedea descrierea și prețul.</p>
+                    <div id="detalii-continut" hidden>
+                        <h3 id="detalii-nume"></h3>
+                        <p id="detalii-descriere"></p>
+                        <p class="pret" id="detalii-pret"></p>
+                        <button class="buton" id="adauga-in-cos" type="button">Adaugă în coș</button>
+                    </div>
+                </section>
+            </div>
+
+            <section class="contact" id="contact">
+                <h2>Contact</h2>
+                <p><b>Telefon:</b> <a href="tel:+40700000000">0755 490 370</a></p>
+                <p><b>Email:</b> <a href="mailto:contact@exemplu.com">osan.alesia@yahoo.com</a></p>
+                <p><b>Adresă:</b> Strada [Numele străzii], nr. 32, Satu Mare</p>
             </section>
         </div>
 
-        <section class="contact" id="contact">
-            <h2>Contact</h2>
-            <p><b>Telefon:</b> <a href="tel:+40700000000">0755 490 370</a></p>
-            <p><b>Email:</b> <a href="mailto:contact@exemplu.com">osan.alesia@yahoo.com</a></p>
-            <p><b>Adresă:</b> Strada [Numele străzii], nr. 32, Satu Mare</p>
+        <section class="pagina-cos" id="cos" hidden>
+            <h2>Coșul tău</h2>
+            <p class="indemn" id="cos-gol">Coșul este gol. Alege ceva bun din meniu!</p>
+            <ul class="cos-lista" id="cos-lista"></ul>
+            <p class="cos-total" id="cos-total" hidden>Total: <span id="cos-suma">0</span> lei</p>
+            <p class="cos-inapoi"><a class="buton" href="#meniu">← Înapoi la meniu</a></p>
         </section>
 
         <script src="atestat.js"></script>

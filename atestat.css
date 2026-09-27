@@ -1,3 +1,7 @@
+[hidden]
+{
+    display: none !important;
+}
 html
 {
     scroll-behavior: smooth;
@@ -53,10 +57,14 @@ body
     display: inline-block;
     padding: 12px 28px;
     border-radius: 30px;
+    border: none;
     background: #8c3456;
     color: #fff;
     text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
     font-weight: bold;
+    cursor: pointer;
 }
 .buton:hover
 {
@@ -162,4 +170,120 @@ body
 .contact a
 {
     color: #8c3456;
+}
+.cos-icon
+{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 4px 12px rgba(140, 52, 86, 0.25);
+    color: #8c3456;
+    text-decoration: none;
+}
+.cos-icon:hover
+{
+    background: #fff;
+}
+.cos-numar
+{
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    min-width: 22px;
+    height: 22px;
+    padding: 0 6px;
+    box-sizing: border-box;
+    border-radius: 11px;
+    background: #8c3456;
+    color: #fff;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 22px;
+    text-align: center;
+}
+.pagina-cos
+{
+    max-width: 700px;
+    margin: 100px auto 60px auto;
+    padding: 20px 30px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+}
+.pagina-cos h2
+{
+    text-align: center;
+    color: #8c3456;
+    margin-top: 0;
+}
+.cos-lista
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.cos-articol
+{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px dashed #e8a5bb;
+}
+.cos-nume
+{
+    flex: 1;
+    font-weight: bold;
+}
+.cos-cantitate
+{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.cos-cantitate button
+{
+    width: 28px;
+    height: 28px;
+    border: 1px solid #e8a5bb;
+    border-radius: 50%;
+    background: #fff;
+    color: #8c3456;
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+}
+.cos-cantitate button:hover
+{
+    background: #fde8ee;
+}
+.cos-subtotal
+{
+    min-width: 70px;
+    text-align: right;
+    font-weight: bold;
+    color: #8c3456;
+}
+.cos-total
+{
+    margin: 0;
+    padding-top: 16px;
+    text-align: right;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #8c3456;
+}
+.cos-inapoi
+{
+    margin: 24px 0 0 0;
+    text-align: center;
 }
