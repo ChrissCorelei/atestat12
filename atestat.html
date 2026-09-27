@@ -4,144 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Patiseria Amira</title>
-        <style>
-            html
-            {
-                scroll-behavior: smooth;
-            }
-            body
-            {
-                margin: 0;
-                min-height: 100vh;
-                background-color: #f9d5e0;
-                background-image:
-                    radial-gradient(circle at 20% 15%, rgba(255, 255, 255, 0.8), transparent 35%),
-                    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.6), transparent 40%),
-                    linear-gradient(160deg, #fde8ee 0%, #f9d5e0 50%, #f4c2d1 100%);
-                background-attachment: fixed;
-                font-family: Georgia, "Times New Roman", serif;
-                color: #6b2e45;
-            }
-            .bun-venit
-            {
-                min-height: 100vh;
-                box-sizing: border-box;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                padding: 40px 20px;
-            }
-            .bun-venit h1
-            {
-                margin: 0 0 10px 0;
-                font-size: 3.2em;
-                color: #8c3456;
-            }
-            .slogan
-            {
-                margin: 0 0 24px 0;
-                font-size: 1.3em;
-                font-style: italic;
-                color: #a14a6b;
-            }
-            .bun-venit .descriere
-            {
-                max-width: 600px;
-                margin: 0 0 32px 0;
-                padding: 20px 30px;
-                line-height: 1.6;
-                background: rgba(255, 255, 255, 0.55);
-                border-radius: 16px;
-            }
-            .buton
-            {
-                display: inline-block;
-                padding: 12px 28px;
-                border-radius: 30px;
-                background: #8c3456;
-                color: #fff;
-                text-decoration: none;
-                font-weight: bold;
-            }
-            .buton:hover
-            {
-                background: #a14a6b;
-            }
-            .meniu
-            {
-                max-width: 700px;
-                margin: 40px auto;
-                padding: 20px 30px;
-                background: rgba(255, 255, 255, 0.6);
-                border-radius: 16px;
-            }
-            .meniu h2
-            {
-                text-align: center;
-                color: #8c3456;
-                margin-top: 0;
-            }
-            .produs
-            {
-                display: flex;
-                justify-content: space-between;
-                gap: 16px;
-                padding: 12px 0;
-                border-bottom: 1px dashed #e8a5bb;
-            }
-            .produs:last-child
-            {
-                border-bottom: none;
-            }
-            .produs h3
-            {
-                margin: 0 0 4px 0;
-                font-size: 1.1em;
-            }
-            .produs p
-            {
-                margin: 0;
-                font-size: 0.9em;
-                color: #8a5a6c;
-            }
-            .pret
-            {
-                font-weight: bold;
-                white-space: nowrap;
-                color: #8c3456;
-            }
-            .meniu .intro
-            {
-                text-align: center;
-                margin: 0 0 16px 0;
-                line-height: 1.6;
-                color: #8a5a6c;
-            }
-            .contact
-            {
-                max-width: 700px;
-                margin: 200px auto 60px auto;
-                padding: 20px 30px;
-                background: rgba(255, 255, 255, 0.6);
-                border-radius: 16px;
-                text-align: center;
-            }
-            .contact h2
-            {
-                color: #8c3456;
-                margin-top: 0;
-            }
-            .contact p
-            {
-                margin: 10px 0;
-            }
-            .contact a
-            {
-                color: #8c3456;
-            }
-        </style>
+        <link rel="stylesheet" href="atestat.css">
     </head>
     <body>
         <section class="bun-venit" id="acasa">
@@ -156,55 +19,31 @@
             <a class="buton" href="#meniu">Descoperă meniul</a>
         </section>
 
-        <section class="meniu" id="meniu">
-            <h2>Meniu</h2>
-            <p class="intro">
-                Toate produsele noastre sunt preparate în laboratorul propriu, în fiecare dimineață.
-                Alege-ți preferatele din lista de mai jos!
-            </p>
-            <div class="produs">
-                <div>
-                    <h3>Papanași</h3>
-                    <p>Cu smântână și dulceață de afine</p>
+        <div class="zona-meniu" id="meniu">
+            <section class="meniu">
+                <h2>Meniu</h2>
+                <p class="intro">
+                    Toate produsele noastre sunt preparate în laboratorul propriu, în fiecare dimineață.
+                    Alege-ți preferatele din lista de mai jos!
+                </p>
+                <button class="produs" type="button" data-descriere="Cu smântână și dulceață de afine" data-pret="22 lei">Papanași</button>
+                <button class="produs" type="button" data-descriere="Blat de ciocolată însiropat, cremă fondantă și glazură" data-pret="12 lei">Amandină</button>
+                <button class="produs" type="button" data-descriere="Blat însiropat cu frișcă proaspătă" data-pret="12 lei">Savarină</button>
+                <button class="produs" type="button" data-descriere="Aluat opărit, cremă de vanilie și glazură de ciocolată" data-pret="10 lei">Ecler cu vanilie</button>
+                <button class="produs" type="button" data-descriere="Cremă de vanilie, frișcă și fructe" data-pret="15 lei">Tort Diplomat (felie)</button>
+                <button class="produs" type="button" data-descriere="Făcut în casă, după rețeta tradițională" data-pret="35 lei">Cozonac cu nucă și cacao</button>
+            </section>
+
+            <section class="detalii">
+                <h2>Detalii</h2>
+                <p class="indemn" id="detalii-indemn">Apasă pe numele unei prăjituri din meniu pentru a vedea descrierea și prețul.</p>
+                <div id="detalii-continut" hidden>
+                    <h3 id="detalii-nume"></h3>
+                    <p id="detalii-descriere"></p>
+                    <p class="pret" id="detalii-pret"></p>
                 </div>
-                <span class="pret">22 lei</span>
-            </div>
-            <div class="produs">
-                <div>
-                    <h3>Amandină</h3>
-                    <p>Blat de ciocolată însiropat, cremă fondantă și glazură</p>
-                </div>
-                <span class="pret">12 lei</span>
-            </div>
-            <div class="produs">
-                <div>
-                    <h3>Savarină</h3>
-                    <p>Blat însiropat cu frișcă proaspătă</p>
-                </div>
-                <span class="pret">12 lei</span>
-            </div>
-            <div class="produs">
-                <div>
-                    <h3>Ecler cu vanilie</h3>
-                    <p>Aluat opărit, cremă de vanilie și glazură de ciocolată</p>
-                </div>
-                <span class="pret">10 lei</span>
-            </div>
-            <div class="produs">
-                <div>
-                    <h3>Tort Diplomat (felie)</h3>
-                    <p>Cremă de vanilie, frișcă și fructe</p>
-                </div>
-                <span class="pret">15 lei</span>
-            </div>
-            <div class="produs">
-                <div>
-                    <h3>Cozonac cu nucă și cacao</h3>
-                    <p>Făcut în casă, după rețeta tradițională</p>
-                </div>
-                <span class="pret">35 lei</span>
-            </div>
-        </section>
+            </section>
+        </div>
 
         <section class="contact" id="contact">
             <h2>Contact</h2>
@@ -212,5 +51,7 @@
             <p><b>Email:</b> <a href="mailto:contact@exemplu.com">osan.alesia@yahoo.com</a></p>
             <p><b>Adresă:</b> Strada [Numele străzii], nr. 32, Satu Mare</p>
         </section>
+
+        <script src="atestat.js"></script>
     </body>
 </html>
