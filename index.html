@@ -58,8 +58,8 @@
 
             <section class="contact" id="contact">
                 <h2>Contact</h2>
-                <p><b>Telefon:</b> <a href="tel:+40700000000">0755 490 370</a></p>
-                <p><b>Email:</b> <a href="mailto:contact@exemplu.com">osan.alesia@yahoo.com</a></p>
+                <p><b>Telefon:</b> <a href="tel:+40755490370">0755 490 370</a></p>
+                <p><b>Email:</b> <a href="mailto:osan.alesia@yahoo.com" id="email-contact">osan.alesia@yahoo.com</a></p>
                 <p><b>Adresă:</b> Piața Romană, nr. 32, Satu Mare</p>
             </section>
         </div>
@@ -69,7 +69,10 @@
             <p class="indemn" id="cos-gol">Coșul este gol. Alege ceva bun din meniu!</p>
             <ul class="cos-lista" id="cos-lista"></ul>
             <p class="cos-total" id="cos-total" hidden>Total: <span id="cos-suma">0</span> lei</p>
-            <p class="cos-inapoi"><a class="buton" href="#meniu">← Înapoi la meniu</a></p>
+            <div class="cos-actiuni">
+                <a class="buton" href="#meniu">← Înapoi la meniu</a>
+                <button class="buton" id="plaseaza-comanda" type="button" hidden>Plasează comanda</button>
+            </div>
         </section>
 
         <script src="index.js"></script>

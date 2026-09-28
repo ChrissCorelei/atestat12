@@ -13,6 +13,8 @@ const cosGol = document.getElementById("cos-gol");
 const cosLista = document.getElementById("cos-lista");
 const cosTotal = document.getElementById("cos-total");
 const cosSuma = document.getElementById("cos-suma");
+const plaseazaComanda = document.getElementById("plaseaza-comanda");
+const emailContact = document.getElementById("email-contact");
 
 const cos = [];
 let produsAles = null;
@@ -97,7 +99,29 @@ function afiseazaCos() {
     cosSuma.textContent = total;
     cosGol.hidden = cos.length > 0;
     cosTotal.hidden = cos.length === 0;
+    plaseazaComanda.hidden = cos.length === 0;
 }
+
+plaseazaComanda.addEventListener("click", function () {
+    const randuri = ["Bună ziua,", "", "Aș dori să comand:"];
+    let total = 0;
+
+    cos.forEach(function (articol) {
+        const subtotal = articol.pret * articol.cantitate;
+        randuri.push("- " + articol.nume + " x " + articol.cantitate + " = " + subtotal + " lei");
+        total = total + subtotal;
+    });
+
+    randuri.push("", "Total: " + total + " lei", "", "Nume:", "Telefon:", "", "Mulțumesc!");
+
+    const adresa = emailContact.textContent.trim();
+    const subiect = "Comandă nouă - Patiseria Amira";
+    const text = randuri.join("\n");
+
+    window.location.href = "mailto:" + adresa
+        + "?subject=" + encodeURIComponent(subiect)
+        + "&body=" + encodeURIComponent(text);
+});
 
 function arataPagina() {
     const peCos = location.hash === "#cos";

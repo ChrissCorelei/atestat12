@@ -282,8 +282,11 @@ body
     font-weight: bold;
     color: #8c3456;
 }
-.cos-inapoi
+.cos-actiuni
 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
     margin: 24px 0 0 0;
-    text-align: center;
 }
