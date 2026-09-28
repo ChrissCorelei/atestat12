@@ -137,6 +137,30 @@ body
     font-style: italic;
     color: #8a5a6c;
 }
+.detalii-foto
+{
+    margin: 0 0 16px 0;
+}
+.detalii-foto img
+{
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+    background: rgba(232, 165, 187, 0.3);
+}
+.detalii-foto figcaption
+{
+    margin-top: 6px;
+    font-size: 0.75em;
+    text-align: right;
+    color: #8a5a6c;
+}
+.detalii-foto a
+{
+    color: inherit;
+}
 .detalii h3
 {
     margin: 0 0 12px 0;
@@ -176,7 +200,7 @@ body
 }
 .contact p
 {
-    margin: 10px 0;
+    margin: 20px 0;
 }
 .contact a
 {

@@ -5,6 +5,9 @@ const nume = document.getElementById("detalii-nume");
 const descriere = document.getElementById("detalii-descriere");
 const pret = document.getElementById("detalii-pret");
 const adaugaInCos = document.getElementById("adauga-in-cos");
+const foto = document.getElementById("detalii-foto");
+const imagine = document.getElementById("detalii-imagine");
+const credit = document.getElementById("detalii-credit");
 
 const paginaPrincipala = document.getElementById("pagina-principala");
 const paginaCos = document.getElementById("cos");
@@ -34,9 +37,23 @@ produse.forEach(function (produs) {
         descriere.textContent = produs.dataset.descriere;
         pret.textContent = produs.dataset.pret + " lei";
 
+        if (produs.dataset.imagine) {
+            imagine.src = produs.dataset.imagine;
+            imagine.alt = produs.textContent;
+            credit.textContent = produs.dataset.credit;
+            credit.href = produs.dataset.sursa;
+            foto.hidden = false;
+        } else {
+            foto.hidden = true;
+        }
+
         indemn.hidden = true;
         continut.hidden = false;
     });
+});
+
+imagine.addEventListener("error", function () {
+    foto.hidden = true;
 });
 
 adaugaInCos.addEventListener("click", function () {
