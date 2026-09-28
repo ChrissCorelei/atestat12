@@ -136,7 +136,7 @@ function pregatesteEmailul(total) {
         randuri.push("- " + articol.nume + " x " + articol.cantitate + " = " + subtotal + " lei");
     });
 
-    randuri.push("", "Total: " + total + " lei", "", "Nume:", "Telefon:", "", "Mulțumesc!");
+    randuri.push("", "Total: " + total + " lei", "", "Nume:", "Telefon:", "Adresă:", "", "Mulțumesc!");
 
     const adresa = emailContact.textContent.trim();
     const subiect = encodeURIComponent("Comandă nouă - Patiseria Amira");
