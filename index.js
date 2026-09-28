@@ -15,6 +15,9 @@ const cosTotal = document.getElementById("cos-total");
 const cosSuma = document.getElementById("cos-suma");
 const plaseazaComanda = document.getElementById("plaseaza-comanda");
 const emailContact = document.getElementById("email-contact");
+const cosTrimitere = document.getElementById("cos-trimitere");
+const trimiteGmail = document.getElementById("trimite-gmail");
+const trimiteAplicatie = document.getElementById("trimite-aplicatie");
 
 const cos = [];
 let produsAles = null;
@@ -100,27 +103,34 @@ function afiseazaCos() {
     cosGol.hidden = cos.length > 0;
     cosTotal.hidden = cos.length === 0;
     plaseazaComanda.hidden = cos.length === 0;
+
+    if (cos.length === 0) {
+        cosTrimitere.hidden = true;
+    }
+
+    pregatesteEmailul(total);
 }
 
-plaseazaComanda.addEventListener("click", function () {
+function pregatesteEmailul(total) {
     const randuri = ["Bună ziua,", "", "Aș dori să comand:"];
-    let total = 0;
 
     cos.forEach(function (articol) {
         const subtotal = articol.pret * articol.cantitate;
         randuri.push("- " + articol.nume + " x " + articol.cantitate + " = " + subtotal + " lei");
-        total = total + subtotal;
     });
 
     randuri.push("", "Total: " + total + " lei", "", "Nume:", "Telefon:", "", "Mulțumesc!");
 
     const adresa = emailContact.textContent.trim();
-    const subiect = "Comandă nouă - Patiseria Amira";
-    const text = randuri.join("\n");
+    const subiect = encodeURIComponent("Comandă nouă - Patiseria Amira");
+    const text = encodeURIComponent(randuri.join("\n"));
 
-    window.location.href = "mailto:" + adresa
-        + "?subject=" + encodeURIComponent(subiect)
-        + "&body=" + encodeURIComponent(text);
+    trimiteAplicatie.href = "mailto:" + adresa + "?subject=" + subiect + "&body=" + text;
+    trimiteGmail.href = "https://mail.google.com/mail/?view=cm&fs=1&to=" + adresa + "&su=" + subiect + "&body=" + text;
+}
+
+plaseazaComanda.addEventListener("click", function () {
+    cosTrimitere.hidden = false;
 });
 
 function arataPagina() {

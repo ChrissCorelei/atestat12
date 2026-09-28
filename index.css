@@ -70,6 +70,17 @@ body
 {
     background: #a14a6b;
 }
+.buton-secundar
+{
+    padding: 10px 26px;
+    border: 2px solid #8c3456;
+    background: #fff;
+    color: #8c3456;
+}
+.buton-secundar:hover
+{
+    background: #fde8ee;
+}
 .zona-meniu
 {
     display: flex;
@@ -289,4 +300,21 @@ body
     justify-content: center;
     gap: 12px;
     margin: 24px 0 0 0;
+}
+.cos-trimitere
+{
+    margin: 20px 0 0 0;
+    padding-top: 16px;
+    border-top: 1px dashed #e8a5bb;
+    text-align: center;
+}
+.cos-trimitere p
+{
+    margin: 0 0 12px 0;
+    font-style: italic;
+    color: #8a5a6c;
+}
+.cos-trimitere .cos-actiuni
+{
+    margin: 0;
 }
